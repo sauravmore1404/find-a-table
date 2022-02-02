@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>
+                table practice
+            </title>
+            <style>
+                p{
+                    color: blue;
+                }
+            </style>
+    </head>
+    <body>
+        <h2>Enter the Table you want to print</h2>
+         Table Number <input type="number" id="tablenumber" size="20px" name="number"> <br />
+         <br />
+        <button onclick="multiplicationtable(parseInt(document.getElementById('tablenumber').value))">Submit</button>
+         <p id="demo"></p>
+         <script>
+            document.getElementById('demo').style.fontSize='20px';
+            var ans;
+            function multiplicationtable(userInputNumber){
+                if(isNaN(userInputNumber)) return;
+                var demoText = '';
+                for (var i=1; i<=10; i++) {
+                    ans = userInputNumber * i;
+                    demoText = demoText + userInputNumber +' * ' + i + ' = ' +  ans  + '<br />';
+                }
+                document.getElementById('demo').innerHTML = demoText;
+            }
+         </script>
+    </body>
+</html>
